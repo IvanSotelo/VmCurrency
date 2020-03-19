@@ -21,6 +21,7 @@ export default {
       class: {
         'vm-con-input-label': true,
         'vm-input': true,
+        'vm-input-primary': true,
         isFocus: this.isFocus
       }
     }, [
