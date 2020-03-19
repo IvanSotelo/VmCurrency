@@ -1,6 +1,7 @@
 <template lang="pug">
   #app
-    vm-currency
+    vm-currency(label="Hola" placeholder="hhb" v-model="price")
+    p {{ price }}
 </template>
 
 <script>
@@ -9,7 +10,10 @@ export default {
   name: 'App',
   components: {
     VmCurrency
-  }
+  },
+  data: () => ({
+    price: 1200
+  })
 }
 </script>
 <style lang="stylus">
