@@ -17,11 +17,57 @@ export default {
         contenteditable: this.hasContentEditable
       }
     }
+    const vmIcon = (this.success || this.danger || this.warning) ? h('span', {
+      class: {
+        'input-icon-validate': true,
+        'vm-input--icon-validate': true
+      }
+    }, [
+      h('vm-icon', {
+        attrs: {
+          icon: this.getIcon()
+        }
+      })
+    ]) : null
+    const spanText = this.success ? this.successText : this.danger ? this.dangerText : this.warningText
+    const validationText = (this.success || this.danger || this.warning) ? h('div', {
+      class: {
+        'con-text-validation': true,
+        'vm-input--text-validation-span': true,
+        'span-text-validation-success': this.success,
+        'span-text-validation-danger': this.danger,
+        'span-text-validation-warning': this.warning
+      }
+    }, [
+      h('span', {
+        class: {
+          'span-text-validation': true
+        }
+      }, spanText)
+    ]) : null
+
+    const descriptionText = this.descriptionText ? h('div', {
+      class: {
+        'con-text-validation': true,
+        'vm-input--text-validation-span': true,
+        'span-text-validation': true
+      }
+    }, [
+      h('span', {
+        class: {
+          'span-text-validation': true
+        }
+      }, this.descriptionText)
+    ]) : null
+
     return h('div', {
       class: {
         'vm-con-input-label': true,
         'vm-input': true,
         'vm-input-primary': true,
+        'input-icon-validate-success': this.success,
+        'input-icon-validate-danger': this.danger,
+        'input-icon-validate-warning': this.warning,
         isFocus: this.isFocus
       }
     }, [
@@ -48,8 +94,11 @@ export default {
             focus: evt => this.changeFocus(true),
             blur: evt => this.changeFocus(false)
           }
-        })
-      ])
+        }),
+        vmIcon
+      ]),
+      validationText,
+      descriptionText
     ])
   },
   props: {
@@ -88,6 +137,46 @@ export default {
       type: String,
       required: false,
       default: 'input'
+    },
+    success: {
+      default: false,
+      type: Boolean
+    },
+    danger: {
+      default: false,
+      type: Boolean
+    },
+    warning: {
+      default: false,
+      type: Boolean
+    },
+    valIconSuccess: {
+      default: 'checkmark-circle-outline',
+      type: String
+    },
+    valIconDanger: {
+      default: 'close',
+      type: String
+    },
+    valIconWarning: {
+      default: 'alert-triangle-outline',
+      type: String
+    },
+    successText: {
+      default: null,
+      type: String
+    },
+    dangerText: {
+      default: null,
+      type: String
+    },
+    warningText: {
+      default: null,
+      type: String
+    },
+    descriptionText: {
+      default: null,
+      type: String
     }
   },
   data () {
@@ -180,6 +269,12 @@ export default {
     },
     changeFocus (booleanx) {
       this.isFocus = booleanx
+    },
+    getIcon () {
+      return this.danger ? this.valIconDanger
+        : this.warning ? this.valIconWarning
+          : this.success ? this.valIconSuccess
+            : ''
     }
   },
   /*
