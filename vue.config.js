@@ -10,6 +10,6 @@ module.exports = {
       .tap(options => Object.assign(options, { limit: Infinity }))
   },
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/vm-currency/'
+    ? '/VmCurrency/'
     : '/'
 }
