@@ -3,7 +3,7 @@
 > A input currency type
 
 
-[![NPMVERSION](https://img.shields.io/npm/v/vm-currency.svg)](http://npmjs.com/package/vm-currency) [![GITHUBSTARS](https://img.shields.io/github/stars/Controlla/vm-currency.svg)](https://github.com/Controlla/vm-currency/stargazers) [![BUILD](https://travis-ci.org/Controlla/vm-currency.svg?branch=master)](https://travis-ci.org/Controlla/vm-currency) [![DOWNLOADS](https://img.shields.io/npm/dt/vm-currency.svg)](https://npmjs.com/package/vm-currency)
+[![NPMVERSION](https://img.shields.io/npm/v/vm-currency.svg)](http://npmjs.com/package/vm-currency) [![GITHUBSTARS](https://img.shields.io/github/stars/IvanSotelo/VmCurrency.svg)](https://github.com/IvanSotelo/VmCurrency/stargazers) [![BUILD](https://travis-ci.org/IvanSotelo/VmCurrency.svg?branch=master)](https://travis-ci.org/IvanSotelo/VmCurrency) [![DOWNLOADS](https://img.shields.io/npm/dt/vm-currency.svg)](https://npmjs.com/package/vm-currency)
 
 ## Installation
 
@@ -26,21 +26,15 @@ $ yarn add vm-currency
 </template>
 
 <script>
-  import vm-currency from 'vm-currency';
+  import { VmCurrency } from 'vm-currency';
   export default {
     name: 'demo',
     components: {
-      vm-currency
+      VmCurrency
     }
   };
 </script>
 ```
-
-## Properties
-
-* `blend-mode` **[String]**
-
-  Optional; `difference` by defualt. The blend mode.
 
 
 ## License
@@ -48,7 +42,7 @@ $ yarn add vm-currency
 ```
 The MIT License (MIT)
 
-Copyright (c) 2019 Ivan Sotelo Vargas
+Copyright (c) 2020 Ivan Sotelo Vargas
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

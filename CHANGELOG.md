@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/Controlla/vm-currency/compare/v0.2.3...v0.2.4) (2020-03-19)
+
+
+### Bug Fixes
+
+* banners ([c983b46](https://github.com/Controlla/vm-currency/commit/c983b46))
+
+
+
 ### [0.2.3](https://github.com/Controlla/vm-currency/compare/v0.2.2...v0.2.3) (2020-03-19)
 
 

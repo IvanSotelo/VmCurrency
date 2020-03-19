@@ -38,4 +38,7 @@ export default {
   select
   textarea
     font-family inherit
+
+  p
+    color: #fff
 </style>
