@@ -168,6 +168,7 @@ export default {
         // eslint-disable-next-line no-void
         if (options === void (0) || options === null) {
           // If the given `optionElement` does not exist, we switch back to the default options
+          // eslint-disable-next-line no-console
           console.warn(`The given pre-defined options [${optionElement}] is not recognized by AutoNumeric.\nSwitching back to the default options.`)
           options = defaultOptions // Default value
         }
