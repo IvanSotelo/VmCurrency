@@ -68,7 +68,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.1.2",
     "husky": "^2.7.0",
-    "standard-version": "^8.0.1",
+    "standard-version": "^9.5.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-pug": "~1.0.7",
